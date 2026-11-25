@@ -113,9 +113,9 @@ footer{padding:26px max(5vw,16px) 34px;background:var(--night2) !important;borde
 <nav class="tabs" aria-label="Main">
   <a class="tab t1" href="#instruction"><span class="e" aria-hidden="true">🎯</span>Instruction</a>
   <a class="tab t2" href="#cooperative-learning"><span class="e" aria-hidden="true">🤝</span>Cooperative Learning</a>
-  <a class="tab t3" href="#sel"><span class="e" aria-hidden="true">💜</span>Social/Emotional Learning</a>
   <a class="tab t5" href="#culture"><span class="e" aria-hidden="true">🏫</span>Culture</a>
-  <a class="tab t4" href="#tools"><span class="e" aria-hidden="true">🧰</span>Tools/Resources</a>
+  <a class="tab t3" href="#sel"><span class="e" aria-hidden="true">💜</span>Social/Emotional Learning</a>
+  <a class="tab t4" href="#tools"><span class="e" aria-hidden="true">🧰</span>Tools &amp; Resources</a>
 </nav>
 
 <main>
@@ -148,9 +148,9 @@ footer{padding:26px max(5vw,16px) 34px;background:var(--night2) !important;borde
   <div class="grid">
     <a class="door d1" id="instruction" href="#instruction"><span class="e" aria-hidden="true">🎯</span><b>Instruction</b><small>Engaging strategies, discussion moves and lesson routines that get every student thinking.</small><span class="soon">Moving in soon</span></a>
     <a class="door d2" id="cooperative-learning" href="#cooperative-learning"><span class="e" aria-hidden="true">🤝</span><b>Cooperative Learning</b><small>Structures with scripts, steps, variations and fixes.</small><span class="soon">Moving in soon</span></a>
-    <a class="door d3" id="sel" href="#sel"><span class="e" aria-hidden="true">💜</span><b>Social/Emotional Learning</b><small>Curriculum, community builders and the skills that make learning work.</small><span class="soon">Moving in soon</span></a>
     <a class="door d5" id="culture" href="#culture"><span class="e" aria-hidden="true">🏫</span><b>Culture</b><small>Routines, rituals, norms and traditions that make a whole school feel like home.</small><span class="soon">Moving in soon</span></a>
-    <a class="door d4" id="tools" href="#tools"><span class="e" aria-hidden="true">🧰</span><b>Tools/Resources</b><small>Timers, student pickers, Card Maker, handouts and printables.</small><span class="soon">Moving in soon</span></a>
+    <a class="door d3" id="sel" href="#sel"><span class="e" aria-hidden="true">💜</span><b>Social/Emotional Learning</b><small>Curriculum, community builders and the skills that make learning work.</small><span class="soon">Moving in soon</span></a>
+    <a class="door d4" id="tools" href="#tools"><span class="e" aria-hidden="true">🧰</span><b>Tools &amp; Resources</b><small>Timers, student pickers, Card Maker, handouts and printables.</small><span class="soon">Moving in soon</span></a>
   </div>
 </section>
 </main>
@@ -166,14 +166,14 @@ footer{padding:26px max(5vw,16px) 34px;background:var(--night2) !important;borde
     ["🏫","Culture","Hallways where everyone is known by name","#35e0a1"],
     ["🎯","Instruction","Every voice in the conversation","#3cc6ff"],
     ["🤝","Cooperative Learning","Mix-Pair-Share, right on the clock","#ff4f9a"],
-    ["🧰","Tools/Resources","Gallery Walk, ready to print","#ffc83d"],
+    ["🧰","Tools & Resources","Gallery Walk, ready to print","#ffc83d"],
     ["💜","Social/Emotional Learning","Nobody eats alone","#9b6bff"]
   ];
   var scenes=document.querySelectorAll('.scene'),cap=document.getElementById('cap'),dots=document.getElementById('dots'),i=0,t;
   data.forEach(function(d,n){var b=document.createElement('button');b.type='button';b.setAttribute('aria-label',d[1]);b.onclick=function(){go(n);start();};dots.appendChild(b);});
   function go(n){scenes[i].classList.remove('on');dots.children[i].classList.remove('on');i=n;var img=scenes[i].querySelector('img');img.loading='eager';
     scenes[i].classList.add('on');dots.children[i].classList.add('on');var d=data[i];cap.style.setProperty('--c',d[3]);
-    cap.querySelector('.e').textContent=d[0];cap.href={'Instruction':'#instruction','Cooperative Learning':'#cooperative-learning','Social/Emotional Learning':'#sel','Tools/Resources':'#tools','Culture':'#culture'}[d[1]];cap.querySelector('b').textContent=d[1];cap.querySelector('.t').textContent=d[2];}
+    cap.querySelector('.e').textContent=d[0];cap.href={'Instruction':'#instruction','Cooperative Learning':'#cooperative-learning','Social/Emotional Learning':'#sel','Tools & Resources':'#tools','Culture':'#culture'}[d[1]];cap.querySelector('b').textContent=d[1];cap.querySelector('.t').textContent=d[2];}
   function start(){clearInterval(t);if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;t=setInterval(function(){go((i+1)%scenes.length)},5500);}
   dots.children[0].classList.add('on');start();
 })();
