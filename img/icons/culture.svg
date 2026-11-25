@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+<defs><filter id="r" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency=".05" numOctaves="2" seed="11" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter></defs>
+<g filter="url(#r)" stroke-linecap="round" stroke-linejoin="round">
+
+<g transform="translate(2.4 2.2)"><path d="M9 30 L32 15 L55 30 Z" fill="#35e0a1"/><rect x="11" y="30" width="42" height="26" fill="#35e0a1"/><path d="M32 4 L43 7.5 L32 11 Z" fill="#ff4f9a"/></g>
+<rect x="15" y="35" width="8.5" height="8.5" fill="#fff"/><rect x="40.5" y="35" width="8.5" height="8.5" fill="#fff"/><path d="M27 56 V47 C27 41.5 37 41.5 37 47 V56 Z" fill="#fff"/>
+<path fill="none" stroke="#11152b" stroke-width="3.2" d="M7.5 30.6 L32 14.6 L56.6 30.4 Z"/>
+<path fill="none" stroke="#11152b" stroke-width="3.2" d="M11 30.8 V56.2 M53 30.6 V56.4"/>
+<path fill="none" stroke="#11152b" stroke-width="3.2" d="M4 56.6 C22 55.8 42 57.2 60 56.2"/>
+<path fill="none" stroke="#11152b" stroke-width="3.2" d="M32 14.8 V3.6 L43 7.4 L32.2 10.8"/>
+<path fill="none" stroke="#11152b" stroke-width="3.2" d="M15 35.2 H23.6 V43.6 H15.1 Z M40.4 35 H49 V43.4 H40.5 Z"/>
+<path fill="none" stroke="#11152b" stroke-width="2" d="M19.3 35.3 V43.4 M15.2 39.4 H23.4 M44.7 35.1 V43.3 M40.6 39.2 H48.8"/>
+<path fill="none" stroke="#11152b" stroke-width="3.2" d="M27 56 V47 C27.2 41.4 36.8 41.4 37 47 V56"/>
+<circle cx="32" cy="24" r="3.2" fill="#fff" stroke="#11152b" stroke-width="2.4"/>
+<path fill="none" stroke="#11152b" stroke-width="2" d="M46 47.5 l3.5 3.5 M49 46.5 l2.5 2.5"/>
+</g></svg>
