@@ -30,17 +30,16 @@ a{text-decoration:none}
 
 /* tabs with sketchnote icons */
 .tabs{position:sticky;top:0;z-index:20;display:flex;justify-content:center;flex-wrap:wrap;gap:12px;padding:12px 16px;background:#000000cc;backdrop-filter:blur(14px) saturate(1.4);-webkit-backdrop-filter:blur(14px) saturate(1.4);border-bottom:1px solid #ffffff22;box-shadow:0 1px 0 #3cc6ff44,0 12px 30px -10px #000}
-.tab{--c:var(--sky);display:inline-flex;align-items:center;gap:10px;min-height:56px;padding:6px 18px 6px 7px;border-radius:999px;font-weight:700;font-size:15.5px;color:#fff !important;
+.tab{--c:var(--sky);display:inline-flex;align-items:center;gap:10px;min-height:66px;padding:6px 20px 6px 6px;border-radius:999px;font-weight:700;font-size:15.5px;color:#fff !important;
   background:linear-gradient(#0b0b12,#0b0b12) padding-box,linear-gradient(120deg,var(--c),#ffffff55 60%,var(--c)) border-box;border:2px solid transparent;
   box-shadow:0 0 0 0 var(--c),0 8px 22px -10px var(--c);transition:transform .2s,box-shadow .2s}
-.tab .e{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:#fffaf0;border:2.5px solid var(--c);box-shadow:0 0 14px -2px var(--c);transform:rotate(-4deg)}
-.tab .e img{width:38px;height:38px}
-.tab:nth-child(even) .e{transform:rotate(4deg)}
+.tab .e{display:block;flex:none;width:54px;height:54px;border-radius:50%;overflow:hidden;background:#f4f1ea;border:2.5px solid var(--c);box-shadow:0 0 14px -2px var(--c)}
+.tab .e img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.06)}
 .tab:hover,.tab:focus-visible{transform:translateY(-2px);box-shadow:0 0 18px -2px var(--c),0 10px 26px -8px var(--c);outline:none}
 .t1{--c:#3cc6ff}.t2{--c:#ff4f9a}.t3{--c:#9b6bff}.t4{--c:#ffc83d}.t5{--c:#35e0a1}
 
 /* hero */
-.hero{position:relative;overflow:hidden;min-height:min(96vh,940px);margin-top:-81px;padding:104px 16px 0;display:grid;place-items:start center;background:var(--night) !important}
+.hero{position:relative;overflow:hidden;min-height:min(96vh,940px);margin-top:-91px;padding:104px 16px 0;display:grid;place-items:start center;background:var(--night) !important}
 .aur{position:absolute;inset:-25%;background:
   radial-gradient(32% 28% at 28% 34%,#7b3dffb0,transparent 70%),
   radial-gradient(28% 26% at 72% 30%,#ff4f9aa0,transparent 70%),
@@ -92,18 +91,18 @@ footer{padding:26px max(5vw,16px) 34px;background:var(--night2) !important;borde
 @media (max-width:600px){
   .tabs{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;padding-bottom:6px;scrollbar-width:none}
   .tab{flex:none}
-  .hero{margin-top:-60px;padding-top:84px}
+  .hero{margin-top:-70px;padding-top:94px}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none !important}}
 </style>
 </head>
 <body>
 <nav class="tabs" aria-label="Main">
-  <a class="tab t1" href="#instruction"><span class="e" aria-hidden="true"><img src="img/icons/instruction.svg" alt="" width="64" height="64"></span>Instruction</a>
-  <a class="tab t2" href="#cooperative-learning"><span class="e" aria-hidden="true"><img src="img/icons/cooperative-learning.svg" alt="" width="64" height="64"></span>Cooperative Learning</a>
-  <a class="tab t5" href="#culture"><span class="e" aria-hidden="true"><img src="img/icons/culture.svg" alt="" width="64" height="64"></span>Culture</a>
-  <a class="tab t3" href="#sel"><span class="e" aria-hidden="true"><img src="img/icons/sel.svg" alt="" width="64" height="64"></span>Social/Emotional Learning</a>
-  <a class="tab t4" href="#tools"><span class="e" aria-hidden="true"><img src="img/icons/tools.svg" alt="" width="64" height="64"></span>Tools &amp; Resources</a>
+  <a class="tab t1" href="#instruction"><span class="e" aria-hidden="true"><img src="img/icons/instruction.webp" alt="" width="160" height="160"></span>Instruction</a>
+  <a class="tab t2" href="#cooperative-learning"><span class="e" aria-hidden="true"><img src="img/icons/cooperative-learning.webp" alt="" width="160" height="160"></span>Cooperative Learning</a>
+  <a class="tab t5" href="#culture"><span class="e" aria-hidden="true"><img src="img/icons/culture.webp" alt="" width="160" height="160"></span>Culture</a>
+  <a class="tab t3" href="#sel"><span class="e" aria-hidden="true"><img src="img/icons/sel.webp" alt="" width="160" height="160"></span>Social/Emotional Learning</a>
+  <a class="tab t4" href="#tools"><span class="e" aria-hidden="true"><img src="img/icons/tools.webp" alt="" width="160" height="160"></span>Tools &amp; Resources</a>
 </nav>
 
 <main>
