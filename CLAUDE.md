@@ -17,6 +17,6 @@ Cooperative learning, SEL and classroom culture for grades 6–12.
 - Colors: navy #0b1f5c, blue #1d5bff, sky #3cc6ff, pink #ff4f9a, purple #7b3dff, sun #ffd84d, lilac wash #f6f0ff.
 - Midnight Aurora look (chosen 2026-11-25), on a black background (#000) with aurora glows. Text should pop without looking juvenile. Pages still set `color-scheme: light only` and force their own colors so browser dark mode never repaints them.
 - Fonts in use: Trailmade with pink/purple layered shadow ("Culture Kit" title, chosen 2026-11-25), Cafeteria (subheader), Rubik (body), Instrument Serif + Unbounded (section headings).
-- Hero: rotating editorial-illustration scenes (img/hero/scene-*.webp, darker neon-lit style), sticky black glass ribbon nav; tabs and kit cards use hand-drawn sketchnote SVG icons (img/icons/*.svg) on cream sticker badges, not emoji. Culture icon is a high-five between two different skin tones (Dan rejected schoolhouse, pennant, campfire, etc.).
+- Hero: rotating editorial-illustration scenes (img/hero/scene-*.webp, darker neon-lit style), sticky black glass ribbon nav; tabs and kit cards use hand-drawn sketchnote SVG icons (img/icons/*.svg) on cream sticker badges, not emoji. Culture icon is a single raised hand (warm brown skin, mint hoodie sleeve) with spark lines. Dan rejected schoolhouse, pennant, campfire and two-hand high-five versions.
 - Hero tagline (Cafeteria subheader): "Where Students Grow, Learn & Thrive" (chosen 2026-11-25).
 - Cartoon art follows the BuildBelong cast bible: teens ages 13–17, warm expressions, not juvenile.
