@@ -134,12 +134,8 @@ footer{padding:26px max(5vw,16px) 34px;background:var(--night2) !important;borde
   <div class="center">
     <div class="logo"><img src="img/buildbelong-logo.webp" width="1400" height="578" alt="BuildBelong"></div>
     <h1 id="t">Culture Kit</h1>
-    <p class="sub">Cooperative Learning, SEL, and<br>Classroom Culture for Grades 6–12</p>
-    <div class="actions">
-      <a class="ghost" href="#kit">I have an activity →</a>
-    </div>
+    <p class="sub">Cooperative Learning, SEL<br>and School Culture</p>
   </div>
-  <a class="cap" id="cap" href="#culture" style="--c:#35e0a1"><span class="e" aria-hidden="true">🏫</span><span><b>Culture</b><span class="t">Every morning starts with a welcome</span></span></a>
   <div class="dots" id="dots" role="group" aria-label="Choose a scene"></div>
 </section>
 
@@ -171,11 +167,10 @@ footer{padding:26px max(5vw,16px) 34px;background:var(--night2) !important;borde
     ["🧰","Tools & Resources","Gallery Walk, ready to print","#ffc83d"],
     ["💜","Social/Emotional Learning","Nobody eats alone","#9b6bff"]
   ];
-  var scenes=document.querySelectorAll('.scene'),cap=document.getElementById('cap'),dots=document.getElementById('dots'),i=0,t;
+  var scenes=document.querySelectorAll('.scene'),dots=document.getElementById('dots'),i=0,t;
   data.forEach(function(d,n){var b=document.createElement('button');b.type='button';b.setAttribute('aria-label',d[1]);b.onclick=function(){go(n);start();};dots.appendChild(b);});
   function go(n){scenes[i].classList.remove('on');dots.children[i].classList.remove('on');i=n;var img=scenes[i].querySelector('img');img.loading='eager';
-    scenes[i].classList.add('on');dots.children[i].classList.add('on');var d=data[i];cap.style.setProperty('--c',d[3]);
-    cap.querySelector('.e').textContent=d[0];cap.href={'Instruction':'#instruction','Cooperative Learning':'#cooperative-learning','Social/Emotional Learning':'#sel','Tools & Resources':'#tools','Culture':'#culture'}[d[1]];cap.querySelector('b').textContent=d[1];cap.querySelector('.t').textContent=d[2];}
+    scenes[i].classList.add('on');dots.children[i].classList.add('on');}
   function start(){clearInterval(t);if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;t=setInterval(function(){go((i+1)%scenes.length)},5500);}
   dots.children[0].classList.add('on');start();
 })();
