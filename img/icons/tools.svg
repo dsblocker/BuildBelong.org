@@ -1,16 +1,30 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-<defs><filter id="r" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency=".05" numOctaves="2" seed="9" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter></defs>
-<g filter="url(#r)" stroke-linecap="round" stroke-linejoin="round">
-
-<g transform="rotate(16 47 20)"><path d="M43 30 V9 L47 2 L51 9 V30 Z" fill="#ff4f9a"/><path d="M43 9 L47 2 L51 9 Z" fill="#ffe2b8"/>
-<path fill="none" stroke="#11152b" stroke-width="3.2" d="M43 30 V9 L47 2.2 L51 9 V30 M43 9 H51"/><path fill="#11152b" d="M45.6 4.6 L47 2 L48.4 4.6 Z"/></g>
-<g transform="rotate(-14 16 20)"><rect x="11" y="6" width="9" height="26" fill="#3cc6ff"/>
-<path fill="none" stroke="#11152b" stroke-width="3.2" d="M11 32 V6 H20 V32"/><path fill="none" stroke="#11152b" stroke-width="2" d="M11 11 h4 M11 15.5 h2.6 M11 20 h4 M11 24.5 h2.6"/></g>
-<g transform="translate(2.4 2.2)"><rect x="6" y="27" width="52" height="28" rx="4" fill="#ffc83d"/></g>
-<rect x="6" y="27" width="52" height="28" rx="4" fill="#fff" fill-opacity="0"/>
-<path fill="none" stroke="#11152b" stroke-width="3.2" d="M9.6 27 H54.6 C56.8 27 58 28.4 58 30.6 V51.6 C58 53.8 56.6 55.2 54.4 55.2 H9.4 C7.2 55 6 53.8 6.1 51.4 V30.4 C6 28.4 7.4 27 9.6 27 Z"/>
-<path fill="none" stroke="#11152b" stroke-width="3.2" d="M6.2 36.4 H58"/>
-<path fill="none" stroke="#11152b" stroke-width="3.2" d="M24 27 V21.4 C24 19.8 25 19 26.6 19 H37.4 C39 19 40 19.8 40 21.4 V27"/>
-<rect x="28.5" y="33" width="7" height="7.5" rx="1.4" fill="#fff" stroke="#11152b" stroke-width="2.6"/>
-<path fill="none" stroke="#11152b" stroke-width="2" d="M45 44 l4.5 4.5 M49.5 42.5 l4 4 M41 46 l3.5 3.5"/>
+<defs>
+<style>.p2 *{fill:none !important;stroke-width:1px !important}</style>
+<pattern id="h" width="3" height="3" patternUnits="userSpaceOnUse" patternTransform="rotate(40)"><line x1="0" y1="0" x2="0" y2="3" stroke="#141414" stroke-width="1"/></pattern>
+<pattern id="x" width="2.8" height="2.8" patternUnits="userSpaceOnUse" patternTransform="rotate(40)"><path d="M0 0 V2.8 M0 0 H2.8" stroke="#141414" stroke-width="0.95"/></pattern>
+<filter id="a" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency=".06" numOctaves="2" seed="9" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.8" xChannelSelector="R" yChannelSelector="G"/></filter>
+<filter id="b" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency=".08" numOctaves="2" seed="29" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.6" xChannelSelector="R" yChannelSelector="G"/></filter>
+</defs>
+<g stroke-linecap="round" stroke-linejoin="round">
+<g filter="url(#a)">
+<g transform="rotate(16 47 20)"><path d="M43 30 V9 L47 2 L51 9 V30 Z" fill="#fff"/><path d="M43 9 L47 2 L51 9 Z" fill="url(#h)"/>
+<path fill="none" stroke="#141414" stroke-width="2.6" d="M43 30 V9 L47 2.2 L51 9 V30 M43 9 H51 M47 9 V30"/><path fill="#141414" d="M45.6 4.6 L47 2 L48.4 4.6 Z"/></g>
+<g transform="rotate(-14 16 20)"><rect x="11" y="6" width="9" height="26" fill="#fff"/><path fill="none" stroke="#141414" stroke-width="2.6" d="M11 32 V6 H20 V32"/><path fill="none" stroke="#141414" stroke-width="1.6" d="M11 11 h4 M11 15.5 h2.6 M11 20 h4 M11 24.5 h2.6"/></g>
+<rect x="6" y="27" width="52" height="28" rx="4" fill="#fff"/>
+<path d="M44 37 H58 V51.6 C58 53.8 56.6 55.2 54.4 55.2 H44 Z" fill="url(#h)"/>
+<rect x="6" y="27" width="52" height="28" rx="4" fill="none" stroke="#141414" stroke-width="2.6"/>
+<path fill="none" stroke="#141414" stroke-width="2.6" d="M6.2 36.4 H58"/>
+<path fill="none" stroke="#141414" stroke-width="2.6" d="M24 27 V21.4 C24 19.8 25 19 26.6 19 H37.4 C39 19 40 19.8 40 21.4 V27"/>
+<rect x="28.5" y="33" width="7" height="7.5" rx="1.4" fill="#fff" stroke="#141414" stroke-width="2.2"/></g>
+<g class="p2" filter="url(#b)" opacity=".55" transform="translate(.7 -.6)">
+<g transform="rotate(16 47 20)"><path d="M43 30 V9 L47 2 L51 9 V30 Z" fill="#fff"/><path d="M43 9 L47 2 L51 9 Z" fill="url(#h)"/>
+<path fill="none" stroke="#141414" stroke-width="2.6" d="M43 30 V9 L47 2.2 L51 9 V30 M43 9 H51 M47 9 V30"/><path fill="#141414" d="M45.6 4.6 L47 2 L48.4 4.6 Z"/></g>
+<g transform="rotate(-14 16 20)"><rect x="11" y="6" width="9" height="26" fill="#fff"/><path fill="none" stroke="#141414" stroke-width="2.6" d="M11 32 V6 H20 V32"/><path fill="none" stroke="#141414" stroke-width="1.6" d="M11 11 h4 M11 15.5 h2.6 M11 20 h4 M11 24.5 h2.6"/></g>
+<rect x="6" y="27" width="52" height="28" rx="4" fill="#fff"/>
+<path d="M44 37 H58 V51.6 C58 53.8 56.6 55.2 54.4 55.2 H44 Z" fill="url(#h)"/>
+<rect x="6" y="27" width="52" height="28" rx="4" fill="none" stroke="#141414" stroke-width="2.6"/>
+<path fill="none" stroke="#141414" stroke-width="2.6" d="M6.2 36.4 H58"/>
+<path fill="none" stroke="#141414" stroke-width="2.6" d="M24 27 V21.4 C24 19.8 25 19 26.6 19 H37.4 C39 19 40 19.8 40 21.4 V27"/>
+<rect x="28.5" y="33" width="7" height="7.5" rx="1.4" fill="#fff" stroke="#141414" stroke-width="2.2"/></g>
 </g></svg>
