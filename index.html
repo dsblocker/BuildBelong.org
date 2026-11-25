@@ -38,7 +38,7 @@ a{text-decoration:none}
 .t1{--c:#3cc6ff}.t2{--c:#ff4f9a}.t3{--c:#9b6bff}.t4{--c:#ffc83d}.t5{--c:#35e0a1}
 
 /* hero */
-.hero{position:relative;overflow:hidden;min-height:min(92vh,900px);margin-top:-68px;padding:96px 16px 0;display:grid;place-items:start center;background:var(--night) !important}
+.hero{position:relative;overflow:hidden;min-height:min(96vh,940px);margin-top:-68px;padding:96px 16px 0;display:grid;place-items:start center;background:var(--night) !important}
 .aur{position:absolute;inset:-25%;background:
   radial-gradient(32% 28% at 28% 34%,#7b3dffb0,transparent 70%),
   radial-gradient(28% 26% at 72% 30%,#ff4f9aa0,transparent 70%),
@@ -64,11 +64,24 @@ h1 .k{font:900 clamp(56px,8.4vw,118px)/.9 Unbounded,sans-serif;margin-left:.14em
 .ghost{display:inline-flex;align-items:center;min-height:52px;padding:14px 30px;border-radius:999px;font-weight:800;color:#fff !important;background:linear-gradient(90deg,var(--pink),var(--purple));box-shadow:0 10px 30px #ff4f9a55}
 .btn:focus-visible,.ghost:focus-visible{outline:3px solid var(--sky);outline-offset:3px}
 
-.kids{position:absolute;bottom:0;z-index:2;height:auto;pointer-events:none;animation:lean 8s ease-in-out infinite}
-.kids.l{left:-10px;width:clamp(220px,24vw,420px);transform-origin:bottom left}
-.kids.r{right:-10px;width:clamp(260px,29vw,520px);transform-origin:bottom right;animation-delay:-4s}
-@keyframes lean{50%{transform:rotate(1.2deg) translateY(-3px)}}
-
+/* rotating scenes */
+.scenes{position:absolute;inset:0;z-index:0}
+.scene{position:absolute;inset:0;opacity:0;transition:opacity 1.6s ease}
+.scene img{width:100%;height:100%;object-fit:cover;object-position:center 40%;transform:scale(1.02)}
+.scene.on{opacity:1}
+.scene.on img{animation:zoom 7.5s ease-out forwards}
+@keyframes zoom{to{transform:scale(1.1)}}
+.scrim{position:absolute;inset:0;z-index:1;pointer-events:none;background:
+  radial-gradient(60% 46% at 50% 30%,#000d,#0008 60%,transparent 85%),
+  linear-gradient(#000 0,#000a 18%,#0004 48%,#0006 72%,#000 100%)}
+.cap{position:absolute;z-index:3;left:max(4vw,16px);bottom:clamp(18px,4vh,40px);display:flex;align-items:center;gap:12px;padding:10px 18px 10px 10px;border-radius:999px;color:#fff !important;
+  background:linear-gradient(#000b,#000b) padding-box,linear-gradient(120deg,var(--c),#ffffff33 60%,var(--c)) border-box;border:1.5px solid transparent;backdrop-filter:blur(10px);box-shadow:0 0 30px -8px var(--c);transition:box-shadow .6s}
+.cap .e{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--c);font-size:19px;box-shadow:0 0 16px var(--c)}
+.cap b{display:block;font:800 13px/1 Rubik;letter-spacing:.12em;text-transform:uppercase;color:var(--c) !important}
+.cap span.t{display:block;font:700 16.5px/1.25 Rubik;color:#fff !important;margin-top:3px}
+.dots{position:absolute;z-index:3;right:max(4vw,16px);bottom:clamp(30px,5vh,52px);display:flex;gap:8px}
+.dots button{width:30px;height:5px;border:0;border-radius:9px;background:#ffffff40;cursor:pointer;padding:0}
+.dots button.on{background:#fff;box-shadow:0 0 10px #fff}
 /* doors */
 .doors{position:relative;padding:clamp(48px,7vw,90px) max(5vw,16px);background:linear-gradient(var(--night),var(--night2)) !important}
 .doors h2{margin:0;font:italic 400 clamp(40px,5vw,64px)/1 'Instrument Serif',serif;color:#fff !important}
@@ -86,12 +99,10 @@ h1 .k{font:900 clamp(56px,8.4vw,118px)/.9 Unbounded,sans-serif;margin-left:.14em
 
 footer{padding:26px max(5vw,16px) 34px;background:var(--night2) !important;border-top:1px solid #ffffff1f;color:var(--soft) !important;font-size:14.5px;display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between}
 
-@media (max-width:900px){
-  .hero{min-height:0;padding-bottom:0}
-  .kids-row{display:flex;justify-content:space-between;align-items:flex-end;width:100%;margin-top:6px}
-  .kids{position:static;animation:none}.kids.l{width:44%}.kids.r{width:54%}
+@media (max-width:700px){
+  .hero{min-height:88vh}
+  .cap{right:16px;bottom:56px}.dots{left:0;right:0;justify-content:center;bottom:22px}
 }
-@media (min-width:901px){.kids-row{display:contents}}
 @media (max-width:600px){
   .tabs{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;padding-bottom:6px;scrollbar-width:none}
   .tab{flex:none}
@@ -111,8 +122,15 @@ footer{padding:26px max(5vw,16px) 34px;background:var(--night2) !important;borde
 
 <main>
 <section class="hero" aria-labelledby="t">
-  <div class="aur" aria-hidden="true"></div>
-  <div class="stars" aria-hidden="true"></div>
+  <div class="scenes" aria-hidden="true">
+    <div class="scene on"><img src="img/hero/scene-1.webp" width="1920" height="1080" alt=""></div>
+    <div class="scene"><img src="img/hero/scene-2.webp" width="1920" height="1080" alt="" loading="lazy"></div>
+    <div class="scene"><img src="img/hero/scene-3.webp" width="1920" height="1080" alt="" loading="lazy"></div>
+    <div class="scene"><img src="img/hero/scene-4.webp" width="1920" height="1080" alt="" loading="lazy"></div>
+    <div class="scene"><img src="img/hero/scene-5.webp" width="1920" height="1080" alt="" loading="lazy"></div>
+    <div class="scene"><img src="img/hero/scene-6.webp" width="1920" height="1080" alt="" loading="lazy"></div>
+  </div>
+  <div class="scrim" aria-hidden="true"></div>
   <div class="grain" aria-hidden="true"></div>
   <div class="center">
     <div class="logo"><img src="img/buildbelong-logo.webp" width="1400" height="578" alt="BuildBelong"></div>
@@ -122,10 +140,8 @@ footer{padding:26px max(5vw,16px) 34px;background:var(--night2) !important;borde
       <a class="ghost" href="#kit">I have an activity →</a>
     </div>
   </div>
-  <div class="kids-row">
-    <img class="kids l" src="img/kids-left.webp" width="575" height="900" alt="Three teens leaning in, laughing and pointing toward the center">
-    <img class="kids r" src="img/kids-right.webp" width="716" height="900" alt="Four teens with a big idea, one in a wheelchair, one pointing up at a lightbulb">
-  </div>
+  <a class="cap" id="cap" href="#kit" style="--c:#3cc6ff"><span class="e" aria-hidden="true">🧩</span><span><b>Structures</b><span class="t">Numbered Heads Together: every team, every voice</span></span></a>
+  <div class="dots" id="dots" role="group" aria-label="Choose a scene"></div>
 </section>
 
 <section class="doors" id="kit" aria-labelledby="k">
@@ -145,5 +161,24 @@ footer{padding:26px max(5vw,16px) 34px;background:var(--night2) !important;borde
   <span><b>BuildBelong Culture Kit</b> · Preview of the new site</span>
   <span>Where School Culture &amp; SEL Thrive</span>
 </footer>
+<script>
+(function(){
+  var data=[
+    ["🧩","Structures","Numbered Heads Together: every team, every voice","#3cc6ff"],
+    ["🤝","Classroom Culture","Hallways where everyone is known by name","#ff4f9a"],
+    ["💜","SEL Curriculum","Real talk. Real respect.","#9b6bff"],
+    ["⏱️","Teacher Tools","Mix-Pair-Share, right on the clock","#ffc83d"],
+    ["🖨️","Printables","Gallery Walk, ready to print","#35e0a1"],
+    ["🤝","Belonging","Nobody eats alone","#ff4f9a"]
+  ];
+  var scenes=document.querySelectorAll('.scene'),cap=document.getElementById('cap'),dots=document.getElementById('dots'),i=0,t;
+  data.forEach(function(d,n){var b=document.createElement('button');b.type='button';b.setAttribute('aria-label',d[1]);b.onclick=function(){go(n);start();};dots.appendChild(b);});
+  function go(n){scenes[i].classList.remove('on');dots.children[i].classList.remove('on');i=n;var img=scenes[i].querySelector('img');img.loading='eager';
+    scenes[i].classList.add('on');dots.children[i].classList.add('on');var d=data[i];cap.style.setProperty('--c',d[3]);
+    cap.querySelector('.e').textContent=d[0];cap.querySelector('b').textContent=d[1];cap.querySelector('.t').textContent=d[2];}
+  function start(){clearInterval(t);if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;t=setInterval(function(){go((i+1)%scenes.length)},6500);}
+  dots.children[0].classList.add('on');start();
+})();
+</script>
 </body>
 </html>
