@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light only">
-<meta name="theme-color" content="#070b24">
+<meta name="theme-color" content="#000000">
 <title>BuildBelong Culture Kit</title>
 <meta name="description" content="Cooperative learning, SEL, and classroom culture for grades 6–12, from BuildBelong.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +20,7 @@ PICTURE: the giant glowing logo center stage, teens leaning in from both wings
 COLOUR and TYPE: midnight navy with purple, pink, sky and blue aurora light; Instrument Serif + Unbounded + Cafeteria + Rubik
 LAYOUT: colorful emoji tabs on top, full-bleed hero, glowing doors into the kit
 */
-:root{color-scheme:light only;--night:#070b24;--night2:#0c1338;--ink:#ffffff;--soft:#c9d2ff;--blue:#1d5bff;--sky:#3cc6ff;--pink:#ff4f9a;--purple:#7b3dff;--sun:#ffd84d;--mint:#35e0a1}
+:root{color-scheme:light only;--night:#000000;--night2:#08080d;--ink:#ffffff;--soft:#c9d2ff;--blue:#1d5bff;--sky:#3cc6ff;--pink:#ff4f9a;--purple:#7b3dff;--sun:#ffd84d;--mint:#35e0a1}
 html,body{background:var(--night) !important;color:var(--ink) !important}
 *{box-sizing:border-box;min-width:0}
 body{margin:0;font:17px/1.55 Rubik,system-ui,sans-serif;overflow-x:clip}
@@ -31,7 +31,7 @@ a{text-decoration:none}
 /* emoji tabs */
 .tabs{position:relative;z-index:6;display:flex;justify-content:center;flex-wrap:wrap;gap:12px;padding:22px 16px 0}
 .tab{--c:var(--sky);display:inline-flex;align-items:center;gap:9px;min-height:46px;padding:9px 18px 9px 10px;border-radius:999px;font-weight:700;font-size:15.5px;color:#fff !important;
-  background:linear-gradient(#0c1338,#0c1338) padding-box,linear-gradient(120deg,var(--c),#ffffff55 60%,var(--c)) border-box;border:2px solid transparent;
+  background:linear-gradient(#0b0b12,#0b0b12) padding-box,linear-gradient(120deg,var(--c),#ffffff55 60%,var(--c)) border-box;border:2px solid transparent;
   box-shadow:0 0 0 0 var(--c),0 8px 22px -10px var(--c);transition:transform .2s,box-shadow .2s}
 .tab .e{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--c);font-size:16px;box-shadow:0 0 14px var(--c)}
 .tab:hover,.tab:focus-visible{transform:translateY(-2px);box-shadow:0 0 18px -2px var(--c),0 10px 26px -8px var(--c);outline:none}
@@ -61,7 +61,7 @@ h1 .k{font:900 clamp(56px,8.4vw,118px)/.9 Unbounded,sans-serif;margin-left:.14em
 .sub{margin:clamp(14px,2.4vh,24px) 0 0;max-width:26ch;font:800 clamp(21px,2.4vw,30px)/1.12 cafeteria,'Rubik',sans-serif;color:#dfe5ff !important;text-wrap:balance}
 .actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin:clamp(18px,3vh,30px) 0 28px}
 .btn{display:inline-flex;align-items:center;min-height:50px;padding:14px 28px;border-radius:999px;font-weight:800;color:#fff !important;background:linear-gradient(90deg,var(--pink),var(--purple));box-shadow:0 10px 30px #ff4f9a55}
-.ghost{display:inline-flex;align-items:center;min-height:50px;padding:14px 26px;border-radius:999px;font-weight:700;color:#fff !important;border:1.5px solid #ffffff66;background:#ffffff10;backdrop-filter:blur(6px)}
+.ghost{display:inline-flex;align-items:center;min-height:52px;padding:14px 30px;border-radius:999px;font-weight:800;color:#fff !important;background:linear-gradient(90deg,var(--pink),var(--purple));box-shadow:0 10px 30px #ff4f9a55}
 .btn:focus-visible,.ghost:focus-visible{outline:3px solid var(--sky);outline-offset:3px}
 
 .kids{position:absolute;bottom:0;z-index:2;height:auto;pointer-events:none;animation:lean 8s ease-in-out infinite}
@@ -119,7 +119,6 @@ footer{padding:26px max(5vw,16px) 34px;background:var(--night2) !important;borde
     <h1 id="t"><span class="s">Culture</span><span class="k">KIT</span></h1>
     <p class="sub">Cooperative Learning, SEL, and Classroom Culture for Grades 6–12</p>
     <div class="actions">
-      <a class="btn" href="#kit">Explore the kit</a>
       <a class="ghost" href="#kit">I have an activity →</a>
     </div>
   </div>

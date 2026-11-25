@@ -15,6 +15,6 @@ Cooperative learning, SEL and classroom culture for grades 6–12.
 ## Brand
 - Logo: `img/buildbelong-logo.webp` (master: Drive > BuildBelong Design System > BuildBelong Logo COLOR.png).
 - Colors: navy #0b1f5c, blue #1d5bff, sky #3cc6ff, pink #ff4f9a, purple #7b3dff, sun #ffd84d, lilac wash #f6f0ff.
-- Midnight Aurora look (chosen 2026-11-25): night navy #070b24 with aurora glows. Pages still set `color-scheme: light only` and force their own colors so browser dark mode never repaints them.
+- Midnight Aurora look (chosen 2026-11-25), on a black background (#000) with aurora glows. Text should pop without looking juvenile. Pages still set `color-scheme: light only` and force their own colors so browser dark mode never repaints them.
 - Fonts in use: Instrument Serif + Unbounded (title placeholder), Cafeteria (subheader), Rubik (body).
 - Cartoon art follows the BuildBelong cast bible: teens ages 13–17, warm expressions, not juvenile.
