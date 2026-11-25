@@ -16,7 +16,7 @@
 /*
 VOICE: bold, warm, after-dark premium; a concert stage for classroom culture
 IDEA: the BuildBelong sticker lit up like a headliner under an aurora sky
-PICTURE: the giant glowing logo center stage, teens leaning in from both wings
+PICTURE: glowing logo and title on top, rotating scene below so no faces are covered
 COLOUR and TYPE: midnight navy with purple, pink, sky and blue aurora light; Instrument Serif + Unbounded + Cafeteria + Rubik
 LAYOUT: colorful tabs with hand-drawn sketchnote icons on top, full-bleed hero
 */
@@ -39,7 +39,7 @@ a{text-decoration:none}
 .t1{--c:#3cc6ff}.t2{--c:#ff4f9a}.t3{--c:#9b6bff}.t4{--c:#ffc83d}.t5{--c:#35e0a1}
 
 /* hero */
-.hero{position:relative;overflow:hidden;min-height:min(96vh,940px);margin-top:-91px;padding:104px 16px 0;display:grid;place-items:start center;background:var(--night) !important}
+.hero{position:relative;overflow:hidden;margin-top:-91px;padding:104px 0 0;display:flex;flex-direction:column;align-items:center;background:var(--night) !important}
 .aur{position:absolute;inset:-25%;background:
   radial-gradient(32% 28% at 28% 34%,#7b3dffb0,transparent 70%),
   radial-gradient(28% 26% at 72% 30%,#ff4f9aa0,transparent 70%),
@@ -48,7 +48,7 @@ a{text-decoration:none}
 @keyframes drift{to{transform:translate3d(3%,-2%,0) rotate(6deg)}}
 .grain{position:absolute;inset:0;opacity:.16;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 .stars{position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(#fff 1px,transparent 1.5px),radial-gradient(#fff9 1px,transparent 1.5px);background-size:140px 140px,90px 90px;background-position:20px 30px,60px 80px;opacity:.35;mask-image:linear-gradient(#000 0,transparent 70%)}
-.center{position:relative;z-index:3;display:flex;flex-direction:column;align-items:center;text-align:center;width:min(900px,100%)}
+.center{position:relative;z-index:3;display:flex;flex-direction:column;align-items:center;text-align:center;width:min(900px,100%);padding:0 16px;margin-bottom:clamp(20px,3.5vh,40px)}
 
 .logo{position:relative;width:min(540px,80vw);margin-top:clamp(8px,2vh,20px)}
 .logo::before{content:"";position:absolute;inset:-14% -8%;border-radius:50%;background:radial-gradient(closest-side,#7ad8ffcc,#7b3dff88 45%,#ff4f9a44 70%,transparent);filter:blur(30px);animation:pulse 4.5s ease-in-out infinite}
@@ -64,15 +64,12 @@ h1{margin:clamp(-14px,-1vh,-4px) 0 0;font:400 clamp(84px,10.8vw,160px)/1 trailma
 .btn:focus-visible,.ghost:focus-visible{outline:3px solid var(--sky);outline-offset:3px}
 
 /* rotating scenes */
-.scenes{position:absolute;inset:0;z-index:0}
+.scenes{position:relative;z-index:2;width:100%;aspect-ratio:16/9;max-height:82vh;-webkit-mask-image:linear-gradient(transparent 0,#000 10%,#000 90%,transparent);mask-image:linear-gradient(transparent 0,#000 10%,#000 90%,transparent)}
 .scene{position:absolute;inset:0;opacity:0;transition:opacity 1.6s ease}
-.scene img{width:100%;height:100%;object-fit:cover;object-position:center 40%;transform:scale(1.02)}
+.scene img{width:100%;height:100%;object-fit:cover;object-position:center 32%;transform:scale(1.02)}
 .scene.on{opacity:1}
 .scene.on img{animation:zoom 7.5s ease-out forwards}
 @keyframes zoom{to{transform:scale(1.1)}}
-.scrim{position:absolute;inset:0;z-index:1;pointer-events:none;background:
-  radial-gradient(38% 34% at 50% 34%,#000b,#0006 55%,transparent 80%),
-  linear-gradient(#000c 0,#0003 22%,transparent 45%,#0003 75%,#000 100%)}
 .cap{position:absolute;z-index:3;left:max(4vw,16px);bottom:clamp(18px,4vh,40px);display:flex;align-items:center;gap:12px;padding:10px 18px 10px 10px;border-radius:999px;color:#fff !important;
   background:linear-gradient(#000b,#000b) padding-box,linear-gradient(120deg,var(--c),#ffffff33 60%,var(--c)) border-box;border:1.5px solid transparent;backdrop-filter:blur(10px);box-shadow:0 0 30px -8px var(--c);transition:box-shadow .6s}
 .cap .e{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--c);font-size:19px;box-shadow:0 0 16px var(--c)}
@@ -85,13 +82,13 @@ h1{margin:clamp(-14px,-1vh,-4px) 0 0;font:400 clamp(84px,10.8vw,160px)/1 trailma
 footer{padding:26px max(5vw,16px) 34px;background:var(--night2) !important;border-top:1px solid #ffffff1f;color:var(--soft) !important;font-size:14.5px;display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between}
 
 @media (max-width:700px){
-  .hero{min-height:88vh}
-  .cap{right:16px;bottom:56px}.dots{left:0;right:0;justify-content:center;bottom:22px}
+    .cap{right:16px;bottom:56px}.dots{left:0;right:0;justify-content:center;bottom:22px}
 }
 @media (max-width:600px){
   .tabs{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;padding-bottom:6px;scrollbar-width:none}
   .tab{flex:none}
   .hero{margin-top:-70px;padding-top:94px}
+  .scenes{aspect-ratio:5/4}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none !important}}
 </style>
@@ -107,6 +104,13 @@ footer{padding:26px max(5vw,16px) 34px;background:var(--night2) !important;borde
 
 <main>
 <section class="hero" aria-labelledby="t">
+  <div class="aur" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="center">
+    <div class="logo"><img src="img/buildbelong-logo.webp" width="1400" height="578" alt="BuildBelong"></div>
+    <h1 id="t">Culture Kit</h1>
+    <p class="sub">Where Students Grow, Learn &amp; Thrive</p>
+  </div>
   <div class="scenes" aria-hidden="true">
     <div class="scene on"><img src="img/hero/scene-arrival.webp" width="1920" height="1080" alt=""></div>
     <div class="scene"><img src="img/hero/scene-1.webp" width="1920" height="1080" alt="" loading="lazy"></div>
@@ -115,13 +119,6 @@ footer{padding:26px max(5vw,16px) 34px;background:var(--night2) !important;borde
     <div class="scene"><img src="img/hero/scene-4.webp" width="1920" height="1080" alt="" loading="lazy"></div>
     <div class="scene"><img src="img/hero/scene-5.webp" width="1920" height="1080" alt="" loading="lazy"></div>
     <div class="scene"><img src="img/hero/scene-6.webp" width="1920" height="1080" alt="" loading="lazy"></div>
-  </div>
-  <div class="scrim" aria-hidden="true"></div>
-  <div class="grain" aria-hidden="true"></div>
-  <div class="center">
-    <div class="logo"><img src="img/buildbelong-logo.webp" width="1400" height="578" alt="BuildBelong"></div>
-    <h1 id="t">Culture Kit</h1>
-    <p class="sub">Where Students Grow, Learn &amp; Thrive</p>
   </div>
   <div class="dots" id="dots" role="group" aria-label="Choose a scene"></div>
 </section>
